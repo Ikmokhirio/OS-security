@@ -1,0 +1,47 @@
+.:
+итого 8
+drw-rw-r-- 2 ikmokhirio ikmokhirio 4096 окт 22 01:07 dir
+-rw-r----- 1 root       ikmokhirio    5 окт 22 01:05 file
+-rw------- 1 ikmokhirio ikmokhirio    0 окт 22 01:08 file1
+-rw-rw-rw- 1 ikmokhirio ikmokhirio    0 окт 22 01:09 file2
+
+./dir:
+итого 4
+-rw-rw-r-- 1 ikmokhirio ikmokhirio 7 окт 22 01:07 new_file
+
+    1  cd ~
+    2  mkdir test && cd test
+    3  touch file
+    4  ls -l
+    5  chmod 0 file 
+    6  ls -l
+    7  echo "test" >> file 
+    8  cat ./file 
+    9  chmod u+w file 
+   10  echo "test" >> file 
+   11  ls -l
+   12  cat file 
+   13  chmod g+r file 
+   14  ls -l
+   15  ct ./file
+   16  cat ./file 
+   17  chmod u+r file 
+   18  cat ./file 
+   19  mkdir dir && touch ./dir/new_file && echo "file 2" >> ./dir/new_file
+   20  ls ./dir/
+   21  chmod ugo-x ./dir/
+   22  cat ./dir/new_file 
+   23  rm ./dir/new_file 
+   24  chown root file 
+   25  chgrp root file 
+   26  umask 077 
+   27  touch file1
+   28  ls -l
+   29  umask 0
+   30  touch file2
+   31  ls -l
+   32  cat file
+   33  sudo chmod g+r file
+   34  cat file
+   35  sudo ls -lR >> ~/5\ semester/OS-security/lab2_history.txt 
+   36  history >> ~/5\ semester/OS-security/lab2_history.txt 
